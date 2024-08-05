@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas - Eduancadario Anjinho Feliz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/programs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo/logo.png" alt="Eduancadario Anjinho Feliz" loading="lazy">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="programs.html">Programas</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="programs">
+            <h1>Programas da Escola</h1>
+            <div class="attractions">
+                <ul>
+                    <li>Informatica</li>
+                    <li>Ballet</li>
+                    <li>Musicalização</li>
+                </ul>
+            </div>
+        </section>
+        <section class="gallery-section">
+            <h1>Galeria de Fotos</h1>
+            <button class="gallery-button">Abrir Galeria</button>
+            <div id="gallery" class="gallery-container">
+                <button class="gallery-close">X</button>
+                <div class="gallery-filters">
+                    <button data-filter="all" class="active">Todos</button>
+                    <button data-filter="students">Alunos</button>
+                    <button data-filter="environment">Ambiente</button>
+                    <button data-filter="events">Passeios/Eventos</button>
+                </div>
+                <div class="gallery-content"></div>
+                <div id="lightbox" class="lightbox">
+                    <span class="lightbox-close">X</span>
+                    <img id="lightbox-img" src="" alt="Ampliado">
+                    <a class="arrow left" id="prev">&lt;</a>
+                    <a class="arrow right" id="next">&gt;</a>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Eduancadario Anjinho Feliz. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/programs.js"></script>
+</body>
+</html>

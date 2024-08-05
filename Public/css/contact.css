@@ -1,0 +1,146 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte mais infantil */
+    background-image: url('/Public/Fotos/Papeldeparede/papeluitilizado.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #00bfa5; /* Verde ciano */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    max-height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Formulário de Contato */
+.contact-form-container {
+    max-width: 500px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.contact-form-container img {
+    position: absolute;
+    bottom: -30px; /* Ajuste conforme necessário */
+    right: -20px; /* Ajuste conforme necessário */
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    z-index: 2; /* Coloca a imagem acima do formulário */
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00bfa5;
+    text-align: center;
+}
+
+.contact-form label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #ffeb3b; /* Amarelo */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-form button:hover {
+    background-color: #fdd835; /* Amarelo escuro */
+    transform: scale(1.05);
+}
+
+.contact-form button:active {
+    background-color: #fbc02d; /* Amarelo ainda mais escuro */
+}
+
+/* Ícones de Redes Sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #333; /* Cor dos ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    margin: 0 10px; /* Espaço entre os ícones */
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Cor ao passar o mouse sobre os ícones */
+}
+
+.review-widget {
+    margin: 20px auto;
+    max-width: 800px;
+}
+footer {
+    background-color: #ffeb3b; /* Amarelo */
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px; /* Adiciona margem superior ao rodapé */
+}

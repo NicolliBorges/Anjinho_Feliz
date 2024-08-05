@@ -1,0 +1,267 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #00bfa5; /* Verde ciano */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+header .logo {
+    margin-left: 20px; /* Ajuste o espaço do logo */
+}
+
+header .logo img {
+    max-height: 60px; /* Ajusta o tamanho da logo */
+    display: block;
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* Centraliza o menu horizontalmente */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo do menu */
+}
+
+nav ul li {
+    margin: 0 15px; /* Ajusta o espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Main */
+main {
+    padding: 100px 20px 20px; /* Adiciona padding superior para evitar sobreposição pelo menu fixo */
+    text-align: center; /* Centraliza o texto das seções */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Atrações */
+.attractions {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px; /* Ajusta a largura máxima para centralizar o conteúdo */
+}
+
+.attractions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px;
+}
+
+.attractions ul li {
+    background-color: #00bfa5; /* Cor de fundo dos itens */
+    color: #fff; /* Cor do texto */
+    border-radius: 15px;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1 1 200px; /* Flexibilidade para os itens */
+}
+
+.attractions ul li:hover {
+    background-color: #009e8f; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+/* Botão da Galeria */
+.gallery-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #00bfa5; /* Cor de fundo do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.gallery-button:hover {
+    background-color: #009e8f; /* Cor de fundo mais escura ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+/* Galeria */
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: none; /* Ocultar a galeria por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery-close, .lightbox-close {
+    background: #fff;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.gallery-filters {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.gallery-filters button {
+    background: #00bfa5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.gallery-filters button.active {
+    background-color: #009e8f;
+}
+
+.gallery-filters button:hover {
+    background-color: #009e8f;
+    transform: scale(1.05);
+}
+
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-content div {
+    flex: 1 1 300px; /* Ajusta o tamanho dos itens da galeria */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+.gallery-content img {
+    width: 100%;
+    height: 200px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ddd; /* Ajuste a cor e a largura da borda conforme necessário */
+}
+
+/* Lightbox */
+.lightbox {
+    display: none; /* Ocultar o lightbox por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    display: block;
+    margin: auto; /* Centraliza a imagem horizontalmente */
+}
+
+.lightbox .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1002;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.lightbox .arrow.left {
+    left: 20px;
+}
+
+.lightbox .arrow.right {
+    right: 20px;
+}
+
+.lightbox .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Footer */
+footer {
+    background-color: #ffeb3b; /* Amarelo */
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

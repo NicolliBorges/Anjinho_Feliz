@@ -1,0 +1,221 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte mais infantil */
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #00bfa5; /* Verde ciano */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+
+header .logo {
+    margin-left: 20px; /* Ajuste o espaço do logo */
+}
+
+header .logo img {
+    max-height: 60px; /* Ajusta o tamanho da logo */
+    display: block;
+}
+
+nav {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* Centraliza o menu horizontalmente */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Alinha verticalmente o conteúdo do menu */
+}
+
+nav ul li {
+    margin: 0 15px; /* Ajusta o espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Adicionar espaçamento à esquerda do menu para acomodar o logo */
+main {
+    padding: 100px 20px 20px; /* Adiciona padding superior para evitar sobreposição pelo menu fixo */
+    text-align: center; /* Centraliza o texto das seções */
+}
+
+/* Títulos das seções */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Fotos e Carrossel */
+.photos, .photo-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Fotos e Carrossel */
+.photos div, .photo-carousel div {
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efeito de sombra mais suave */
+    background-color: #f0f0f0; /* Cor de fundo para contraste */
+}
+
+.photos img, .photo-carousel img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 800px; /* Define uma altura máxima para as imagens */
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorcer */
+    border-radius: 10px; /* Bordas arredondadas para as imagens */
+}
+
+.photo-carousel {
+    margin-top: 20px; /* Adiciona espaço acima do carrossel */
+}
+
+footer {
+    background-color: #ffeb3b; /* Amarelo */
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px; /* Adiciona margem superior ao rodapé */
+}
+/* Botões CTA */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #00bfa5; /* Verde ciano */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #009e8f; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+/* Animações de Rolagem com AOS */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+}
+/* Galeria de Destaques */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery div {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* Efeitos de Hover em Botões e Imagens */
+button:hover, .cta-button:hover {
+    background-color: #009e8f; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+.photos img:hover, .photo-carousel img:hover {
+    opacity: 0.8; /* Reduz a opacidade das imagens ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento nas imagens ao passar o mouse */
+    transition: transform 0.3s, opacity 0.3s;
+}
+/* Ícones de Redes Sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #333; /* Cor dos ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    margin: 0 10px; /* Espaço entre os ícones */
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Cor ao passar o mouse sobre os ícones */
+}
+
+/* Estilo para as avaliações */
+.review {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.review p {
+    margin: 0;
+}
+
+.gallery-close {
+    background: #fff;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Botão de Fechar do Lightbox */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}

@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "35.198.62.43",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "Escolinha",
+            "database": "escolinha-db",
+            "username": "root",
+            "password": "1234"
+        }
+    ]
+}
